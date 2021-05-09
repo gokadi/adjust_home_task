@@ -22,7 +22,7 @@ GET parameters:
 - ``os`` - comma-separated list of values
 - ``group_by`` - comma-separated list of values (possible values: 'date', 'channel', 'country', 'os')
 - ``order_by`` - single value ('date', 'channel', 'country', 'os', 'impressions', 'clicks', 'installs', 'spend', 'revenue') 
-- ``view_mode`` - if ``download``, than the report will be downloaded as csv file. If ui, table with data will be rendered.
+- ``view_mode`` - if ``download``, than the report will be downloaded as csv file. If ``ui``, table with data will be rendered.
 
 Response is in csv format:
 
