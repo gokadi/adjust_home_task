@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your report</title>
+</head>
+<body>
+    <p class="js-download-button" style="color: blue; cursor: pointer">Download</p>
+    <table>
+        {% for row in data %}
+            <tr>
+                {% for col in row %}
+                    <td>{{ col }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const downloadButton = document.getElementsByClassName("js-download-button")[0];
+        let url = window.location.href;
+        downloadButton.addEventListener("click", async () => {
+            if (window.location.search) {
+                url += "&download=yes"
+            } else {
+                url += "?download=yes"
+            }
+            window.location.href = url;
+        });
+    })
+</script>
+</html>
